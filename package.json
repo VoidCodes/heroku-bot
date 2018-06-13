@@ -1,0 +1,14 @@
+{
+  "name": "heroku",
+  "version": "1.0.0",
+  "description": "a test heroku bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}
