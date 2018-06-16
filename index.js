@@ -18,7 +18,6 @@ bot.on("message", async message => {
   
   try {
     
-    delete require.cache[require.resolve(`./commands/${cmd}.js`)];
     
     let commandFile = require(`./commands/${cmd}.js`);
     commandFile.run(bot, msg, args);
