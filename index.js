@@ -16,9 +16,17 @@ bot.on("message", async message => {
  let cmd = messageArray[0];
  let args = messageArray.slice(1);
   
-  if (cmd === `${prefix}ping`){
-      message.channel.send('P0ng!');
+  try {
+    
+    delete require.cache[require.resolve(`./commands/${cmd}.js`)];
+    
+    let commandFile = require(`./commands/${cmd}.js`);
+    commandFile.run(bot, msg, args);
+  
+  } catch (e) {
+    console.log(e.stack);
   }
+ 
 });   
 
 bot.login(process.env.token)
