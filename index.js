@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({disableEveryone: true});
 const prefix = '-'
+const ownerID = '457131745591164931'
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
