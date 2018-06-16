@@ -1,3 +1,3 @@
 exports.run = (bot, message, args) => {
-  message.channel.send('Pong!');
+  message.channel.send('POND LOL!');
 }
