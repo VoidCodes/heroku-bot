@@ -18,9 +18,12 @@ bot.on("message", async message => {
   
   try {
     
+    let ops = {
+      ownerID: ownerID
+    }
     
     let commandFile = require(`./commands/${cmd}.js`);
-    commandFile.run(bot, message, args);
+    commandFile.run(bot, message, args, ops);
   
   } catch (e) {
     console.log(e.stack);
