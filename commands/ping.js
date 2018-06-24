@@ -1,3 +1,7 @@
 exports.run = (bot, message, args) => {
-  message.channel.send('Pong!');
+  let pongembed = new Discord.RichEmbed()
+  .setTitle("Ping")
+  .addField("Pong!")
+  .setFooter(`Requested by ${message.author.username}`)
+  message.channel.send(embed);
 }
