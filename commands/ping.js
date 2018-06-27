@@ -5,7 +5,8 @@ exports.run = (bot, message, args) => {
   .setTitle("Ping")
   .setColor(0x00AE86)
   .addField("Pong!")
-  .setDescription(`Made by ${message.author.id}`)
+  .setDescription(`Made by @<${message.author.id}>`)
+  .addField(`Pinged by ${bot.user.username}`)
   .setFooter(`Requested by ${message.author.username}`)
   message.channel.send(embed);
 }
